@@ -96,10 +96,10 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-const options = { useMongoClient: true };
-// var promise = mongoose.connect('mongodb://localhost/syllabus', options);
-// const promise = mongoose.connect('mongodb://syllabus:wcs75@ds163595.mlab.com:63595/syllabus', options);
-const promise = mongoose.connect('mongodb://localhost/syllabus', options);
+// const options = { useMongoClient: true };
+// var promise = mongoose.connect('mongodb://localhost/cinewild', options);
+const promise = mongoose.connect('mongodb://MarcoDum:Marcan98@ds261040.mlab.com:61040/cinewild');
+// const promise = mongoose.connect('mongodb://localhost/syllabus');
 
 promise.then((/* db */) => {
   console.log('We\'re Connected!');

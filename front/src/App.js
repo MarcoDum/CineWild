@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch, NavLink, Link } from 'react-router-dom';
-import logo from './img/logo.png';
 import './App.css';
+import logo from './img/logo.png';
 import Home from './containers/Home';
 import Movies from './containers/Movies';
 import Recommendations from './containers/Recommendations';
@@ -18,17 +18,7 @@ class App extends Component {
           <header>
             <div className="container-fluid App-header">
               <h1>CineWild</h1>
-              <nav>
-                <div className="col-xs-2">
-                  <Link to="/" exact="true"><img src={logo} alt="logo" id="logo" /></Link>
-                </div>
-                <div className="col-xs-10">
-                  <NavLink exact to="/" activeStyle={{textDecoration: 'underline'}} className="navlink">Home</NavLink>
-                  <NavLink to="/genres" activeStyle={{textDecoration: 'underline'}} className="navlink">Recommendations by genre</NavLink>
-                  <NavLink to="/recommendations" activeStyle={{textDecoration: 'underline'}} className="navlink">Recommendations by year</NavLink>
-                  <NavLink to="/contact" activeStyle={{textDecoration: 'underline'}} className="navlink">Contact</NavLink>
-                </div>
-              </nav>
+              
             </div>
           </header>
 
