@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
+import { NavLink, Link } from 'react-router-dom';
 import Axios from 'axios';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class Contact extends Component {
 
@@ -47,30 +51,50 @@ class Contact extends Component {
     
 		return (
 			<div className="container">
+			
 				<h2><span role="img" aria-label="Pop corn"> 🍿 </span>Contact<span role="img" aria-label="Pop corn"> 🍿 </span></h2>
+				<div className="col-xs-10">
+						<NavLink exact to="/" activeStyle={{textDecoration: 'underline'}} className="navlink">Home</NavLink>
+						<NavLink to="/genres" activeStyle={{textDecoration: 'underline'}} className="navlink">Recommendations by genre</NavLink>
+						<NavLink to="/recommendations" activeStyle={{textDecoration: 'underline'}} className="navlink">Recommendations by year</NavLink>
+						<NavLink to="/contact" activeStyle={{textDecoration: 'underline'}} className="navlink">Contact</NavLink>
+				</div>
 				<p className="highlight">If you want to contact me, please fill this form. I will be very happy to hear from you soon !</p>
 
 				<form className="col-xs-8 col-xs-offset-2" onSubmit={this.handleSubmit}>
-					<div className="form-group">
-						<label for="name" className="pull-left">Name*</label>
-						<input type="text" className="form-control input" name="name" onChange={this.handleChange} required />
-					</div>
-					<div className="form-group">
-						<label for="mail" className="pull-left">Mail*</label>
-						<input type="email" className="form-control input" name="mail" onChange={this.handleChange} required />
-					</div>
-					<div className="form-group">
-						<label for="subject" className="pull-left">Subject*</label>
-						<input type="text" className="form-control input" name="subject" onChange={this.handleChange} required/>
-					</div>
-					<div>
-						<label for="message" className="pull-left">Your message*</label><br />
-						<textarea className="form-control" name="message" rows="6" maxLength="400" onChange={this.handleChange} required></textarea>
-					</div>
-					<div className="g-recaptcha" data-sitekey="6Lefpj8UAAAAADLJJ7uHoQ1s71SiSORr4jxKGd8v"></div>					
+					<TextField
+						id="search"
+						label="Name"
+						type="search"
+						className="textField"
+						margin="normal"
+					/>
+					<br>
+					</br>
+					<TextField
+						id="search"
+						label="Email"
+						type="search"
+						className="textField"
+						margin="normal"
+					/>
+					<br>
+					</br>
+					<TextField
+						id="multiline-flexible"
+						label="Message"
+						multiline
+						rowsMax="4"
+						className="textField"
+						margin="normal"
+        			/>
+					<br>
+					</br>
 					<hr/>
-					<button type="submit">Envoyer</button>
-					<p className="text-left">*All fields are mandatory !</p>
+					<Button variant="contained" className="button">
+						Send
+					</Button>
+					<p className="text-left">All fields are mandatory !</p>
 				</form> 
 			</div>
 		);

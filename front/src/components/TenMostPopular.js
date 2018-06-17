@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500/";
 
 class TenMostPopular extends Component {
 
@@ -15,7 +14,7 @@ class TenMostPopular extends Component {
 
 	getTenVideo(){
 		Axios
-		.get('http://localhost:3000/tenpopular')
+		.get('http://localhost:3000/film')
 		.then(response => {
 			this.setState({
 				items: response.data
@@ -38,11 +37,11 @@ class TenMostPopular extends Component {
                 <div className="row flex_to_center_wrap">
                     {this.state.items.map(item => (
                         <div key={item.id} className="col-xs-6">
-                            <h5>{item.title}</h5>
-                            <img src={`${IMAGE_BASE_URL}${item.poster_path}`} alt={item.title} width="120vw"/>
-                            <p className = "text-left">Vote average : {item.vote_average}</p>
-						    <p className = "text-left">Release date : {item.release_date} </p>
-						    <p className="justify">{item.overview}</p>
+                            <h5>{item.titre}</h5>
+                            <img src={`${item.image}`} alt={item.titre} width="120vw"/>
+                            <p className = "text-left">Vote average : {item.note}</p>
+						    <p className = "text-left">Release date : {item.date} </p>
+						    <p className="justify">{item.auteur}</p>
 							<Link to={`/movie/${item.id}`} exact="true">Discover this movie</Link>
                         </div>)
                         )

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500/";
-
 class MovieYear extends Component {
 
 	constructor(props) {
@@ -15,7 +13,7 @@ class MovieYear extends Component {
 
 	getYear(){
 		Axios
-		.get(`http://localhost:3000/${this.props.match.params.year}`)
+		.get(`http://localhost:3000/${this.props.film.params.date}`)
 		.then(response => {
 			this.setState({
 				items: response.data
@@ -34,7 +32,7 @@ class MovieYear extends Component {
 	render() {
 		return (
 			<div className="popularYear">
-				<h2>{this.props.match.params.year}</h2>
+				<h2>{this.props.film.params.date}</h2>
 			</div>
 			
 
