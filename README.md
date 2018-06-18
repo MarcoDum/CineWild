@@ -25,3 +25,8 @@ yarn start
 - Le backend écoute sur le port 3000
 - Le frontend écoute sur le port 3001
 - Pour appeller le backend depuis le frontend : http://localhost:3001/api et non pas http://localhost:3001 (il faut que les 2 soient lancés)
+
+===================
+
+Exercice d'admission à la WILD CODE SCHOOL PARIS
+
