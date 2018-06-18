@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import "../App.css";
 
 class Recommendations extends Component {
 
@@ -15,13 +16,18 @@ class Recommendations extends Component {
 						<NavLink to="/recommendations" activeStyle={{textDecoration: 'underline'}} className="navlink">Recommendations by year</NavLink>
 						<NavLink to="/contact" activeStyle={{textDecoration: 'underline'}} className="navlink">Contact</NavLink>
 				</div>
-				<Link to="/year/1987" exact="true">1987</Link>
+				<hr />
+				<Link to="/year/1987" exact="true" className="year">1987</Link>
+				<hr />
 				<br/>
-				<Link to="/year/1988" exact="true">1988</Link>
+				<Link to="/year/1988" exact="true" className="year">1988</Link>
+				<hr />
 				<br/>
-				<Link to="/year/1987" exact="true">1989</Link>
+				<Link to="/year/1987" exact="true" className="year">1989</Link>
+				<hr />
 				<br/>
-				<Link to="/year/1987" exact="true">1990</Link>
+				<Link to="/year/1987" exact="true" className="year">1990</Link>
+				<hr />
 				<br/>
 			</div>
 		);
