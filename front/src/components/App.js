@@ -4,10 +4,8 @@ import '../App.css';
 import logo from '../img/logo.png';
 import Home from '../containers/Home';
 import Movies from '../containers/Movies';
-import Recommendations from '../containers/Recommendations';
 import Contact from '../containers/Contact';
 import MovieDetail from './MovieDetail';
-import MovieYear from './MovieYear';
 
 class App extends Component {
 
@@ -25,10 +23,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />   
             <Route path="/genres" component={Movies} />
-            <Route path="/recommendations" component={Recommendations} />
             <Route path="/contact" component={Contact} />
-            <Route path="/movie/:id" component={MovieDetail} />
-            <Route path="/year/:year" component={MovieYear} /> 
+            <Route path="/film/:id" component={MovieDetail} />
           </Switch>
 
           <footer>

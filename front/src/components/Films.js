@@ -13,10 +13,10 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'space-around',
   },
-  gridList: {
-    width: 500,
-    height: 450,
-  },
+  imgfilm: {
+    width: "150px",
+    height: "200px",
+  }
 };
 
 class Films extends React.Component {
@@ -31,7 +31,7 @@ class Films extends React.Component {
         {this.props.films.map((film, index) => (
             <div key={film.id} className="col-xs-6">
               <h4>{film.name}</h4>
-              <img src={`/images/${film.img}`}/>
+              <img style={styles.imgfilm} src={`/img/${film.img}`}/>
               <p className = "text-left"><span className="bold">Release date :</span> {film.date}</p>
               <p className = "text-left"><span className="bold">Description :</span> {film.description} </p>
               <p className = "text-left"><span className="bold">Genre : </span>{film.sort}</p>

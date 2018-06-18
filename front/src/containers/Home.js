@@ -18,11 +18,10 @@ class Home extends Component {
 					<div className="col-xs-10">
 						<NavLink exact to="/" activeStyle={{textDecoration: 'underline'}} className="navlink">Home</NavLink>
 						<NavLink to="/genres" activeStyle={{textDecoration: 'underline'}} className="navlink">Recommendations by genre</NavLink>
-						<NavLink to="/recommendations" activeStyle={{textDecoration: 'underline'}} className="navlink">Recommendations by year</NavLink>
 						<NavLink to="/contact" activeStyle={{textDecoration: 'underline'}} className="navlink">Contact</NavLink>
 					</div>
               	</nav>
-				<h3>Welcome to CineWild and Embark with us into a wonderful journay into 7 art !</h3>
+				<h3>CineWild the reference site of the cinema !</h3>
 				<Films/>
 				<TenMostPopular/>
 			</div>
