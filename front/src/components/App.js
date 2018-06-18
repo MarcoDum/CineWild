@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Switch, NavLink, Link } from 'react-router-dom';
-import './App.css';
-import logo from './img/logo.png';
-import Home from './containers/Home';
-import Movies from './containers/Movies';
-import Recommendations from './containers/Recommendations';
-import Contact from './containers/Contact';
-import MovieDetail from './components/MovieDetail';
-import MovieYear from './components/MovieYear';
+import { Route, BrowserRouter, Switch, Link } from 'react-router-dom';
+import '../App.css';
+import logo from '../img/logo.png';
+import Home from '../containers/Home';
+import Movies from '../containers/Movies';
+import Recommendations from '../containers/Recommendations';
+import Contact from '../containers/Contact';
+import MovieDetail from './MovieDetail';
+import MovieYear from './MovieYear';
 
 class App extends Component {
 

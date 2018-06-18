@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-/* const FilmSchema = new Schema(
+ const FilmSchema = new Schema(
   {
     titre: { type: String, required: true, maxlength: 300 },
     date: { type: String, required: true, maxlength: 300 },
@@ -17,14 +17,14 @@ const { Schema } = mongoose;
 */
 
 // Export model
+const mongoose = require('mongoose');
+
 module.exports = mongoose.model('Film', {
-    titre: String,
-    date: String,
-    auteur: String,
-    acteur: String,
-    image: String,
-    note: String,
-    description: String,
-    genre: String,
+  name: String,
+  date: String,
+  sort: String,
+  description: String,
+  img: String,
 });
+
 

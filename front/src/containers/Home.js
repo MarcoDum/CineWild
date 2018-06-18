@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../App.css';
-import MostPopular from '../components/Mostpopular';
-import logo from '../img/logo.png';
+import Films from '../components/Films';
 import TenMostPopular from '../components/TenMostPopular';
 
 
@@ -24,7 +23,7 @@ class Home extends Component {
 					</div>
               	</nav>
 				<h3>Welcome to CineWild and Embark with us into a wonderful journay into 7 art !</h3>
-				<MostPopular/>
+				<Films/>
 				<TenMostPopular/>
 			</div>
 			
